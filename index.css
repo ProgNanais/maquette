@@ -1,0 +1,1119 @@
+/* POLICES */
+
+@font-face 
+{
+    font-family: 'Roboto-Bold';
+    src: url('../webagency_images/fonts/Roboto-Bold.eot');
+    src: url('../webagency_images/fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../webagency_images/fonts/Roboto-Bold.woff') format('woff'),
+         url('../webagency_images/fonts/Roboto-Bold.ttf') format('truetype'),
+         url('../webagency_images/fonts/Roboto-Bold.svg#Roboto-Bold') format('svg');
+}
+
+@font-face 
+{
+    font-family: 'Roboto-Medium';
+    src: url('../webagency_images/fonts/Roboto-Medium.eot');
+    src: url('../webagency_images/fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../webagency_images/fonts/Roboto-Medium.woff') format('woff'),
+         url('../webagency_images/fonts/Roboto-Medium.ttf') format('truetype'),
+         url('../webagency_images/fonts/Roboto-Medium.svg#Roboto-Medium') format('svg');
+}
+
+/* ANIMATIONS */
+
+@-webkit-keyframes AutoSlide 
+{
+    0%, 20%, 100%
+    {
+        left: 0px;
+    }
+    
+    50%, 75%
+    {
+        left: -100%;
+    }
+}
+
+@keyframes AutoSlide 
+{
+    0%, 20%, 100%
+    {
+        left: 0px;
+    }
+    
+    50%, 75%
+    {
+        left: -100%;
+    }
+}
+
+@-webkit-keyframes BarreLoad 
+{
+    0%, 50%
+    {
+        width: 0%;
+    }
+    
+    20%, 75%
+    {
+        width: 100%;
+    }
+}
+
+@keyframes BarreLoad 
+{
+    0%, 50%
+    {
+        width: 0%;
+    }
+    
+    20%, 75%
+    {
+        width: 100%;
+    }
+}
+
+/* PAGE */
+
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* MENU NAV */
+
+#logo
+{
+    padding: 20px 0 20px 0;
+}
+
+#menu
+{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    
+    z-index: 1;
+    
+    position: sticky;
+    top: 0px;
+}
+
+#menu ul
+{
+    display: flex;
+    justify-content: space-around;
+    
+    list-style-type: none;
+    font-family: 'Roboto-Medium', serif;
+    
+    margin-top: 0;
+    padding-top: 35px;
+}
+
+#menu li
+{
+    margin: 0 15px 0 15px;
+}
+
+nav a
+{
+    text-decoration: none;
+    color: rgba(0,0,0,0.5);
+}
+
+nav a:hover
+{
+    color: rgba(0,0,0,0.7);
+    padding-top: 30px;
+    
+    border-top: 3px solid rgb(72,171,204);
+}
+
+
+/* EN-TETE HEADER */
+
+#slider
+{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1600px;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#imagesSlider
+{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    font-size: 0;
+    
+    -webkit-animation: AutoSlide 15s infinite;
+    animation: AutoSlide 15s infinite;
+    
+    display: flex;
+}
+
+#bg1, #bg2
+{
+    width: 20%;
+    height: auto;
+}
+
+#fleches
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 44%;
+}
+
+#flecheGauche
+{
+    font-size: 1.7em;
+    background-color: rgba(0,0,0,0.2);
+    padding: 20px 15px 20px 10px;
+    color: white;
+    
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+    cursor: pointer;
+    
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+#flecheDroite
+{
+    font-size: 1.7em;
+    background-color: rgba(0,0,0,0.2);
+    padding: 20px 10px 20px 15px;
+    color: white;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    
+    cursor: pointer;
+    
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.progressBar
+{
+    width: 100%;
+    height: 5px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 16px;
+    box-shadow: inset 0 1px 2px #000, 0 1px 0 #2b2b2b;
+}
+
+.progressBar::before
+{
+    content: '';
+    display: block;
+    height: 7px;
+    background: rgb(72,171,204);
+    
+    border-radius: 12px;
+    box-shadow: inset 0 1px 0 rgba(72,171,204,0.3), inset 0 -1px 3px rgba(0,0,0,0.4);
+    
+    -webkit-animation: BarreLoad 15s infinite;
+    animation: BarreLoad 15s infinite;
+}
+
+#enTete
+{
+    font-family: 'Roboto-Bold', sans-serif;
+    color: white;
+    
+    position: absolute;
+    top: 27%;
+    left: 14%;
+    width: 40%;
+}
+
+h1
+{
+    font-size: 2.1em;
+}
+
+h1 span
+{
+    color: rgb(72,171,204);
+}
+
+header p
+{
+    font-size: 0.8em;
+}
+
+#boutonTete
+{
+    background-color: rgb(72,171,204);
+    
+    color: white;
+    font-family: 'Roboto-Bold', sans-serif;
+    font-size: 1.1em;
+    
+    border: 1px solid rgb(72,171,204);
+    box-shadow: 1px 2px 2px rgb(72, 171,204);
+    
+    height: 35px;
+    margin-top: 10px;
+    
+    cursor: pointer;
+}
+
+
+/* SECTIONS */
+
+section, footer
+{
+    padding-top: 7%;
+    
+    font-family: 'Roboto-Bold', sans-serif;
+    color: rgba(0,0,0,0.6);
+}
+
+h2
+{
+    text-align: center;
+    font-size: 2.7em;
+    font-family: 'Roboto-Medium', serif;
+    
+    color: rgba(0,0,0,0.9);
+}
+
+hr
+{
+    width: 9%;
+    color: rgba(0,0,0,0.2);
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.point
+{
+    color: rgb(72,171,204);
+    display: block;
+    width: 10px;
+    margin: auto;
+    padding: 0;
+    
+    position: relative;
+    bottom: 18px;
+}
+
+.introduction
+{
+    text-align: center;
+    
+    font-size: 1.1em;
+}
+
+
+/* SECTION SERVICES */
+
+
+#description
+{
+    position: relative;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#services ul
+{
+    list-style-type: none;
+    flex: 0.8;
+    
+    text-align: justify;
+    margin-right: 5%;
+    padding-top: 60px;
+}
+
+#services li
+{
+    display: flex;
+}
+
+.bloc1
+{
+    flex: 0.2;
+}
+
+.bloc2
+{
+    flex: 1;
+}
+
+h3
+{
+    font-size: 1.2em;
+    color: rgba(0,0,0,0.9);
+    font-family: 'Roboto-Medium', serif;
+}
+
+.icone
+{
+    color: rgb(72,171,204);
+    font-size: 1.7em;
+    
+    border-radius: 50%;
+    border: 2px solid rgba(0,0,0,0.2);
+    padding: 15px;
+    
+    position: relative;
+    left: 35px;
+    top: 40px;
+    
+}
+
+.pointCercle
+{
+    color: rgb(72,171,204);
+    font-size: 10px;
+    
+    position: relative;
+    top: 35px;
+    left: 29px;
+}
+
+#imageOrdinateur
+{
+    width: 35%;
+    height: 90%;
+}
+
+/* SECTION PROJETS */
+
+#projets
+{
+    background-color: rgba(222,222,222,0.2);
+    position: relative;
+}
+
+#boutonsProjets
+{
+    list-style-type: none;
+    
+    display: flex;
+    justify-content: center;
+    
+    font-size: 1.5em;
+}
+
+#boutonsProjets li
+{
+    text-align: center;
+}
+
+.flecheBas
+{
+    position: relative;
+    bottom: 27px;
+    
+    font-size: 1.5em;
+    color: rgb(22,101,204);
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+#boutonP1
+{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#boutonP4
+{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#projets a
+{
+    background-color: rgb(235,235,235);
+    color: rgba(0,0,0,0.5);
+    text-decoration: none;
+    
+    padding: 12px;
+}
+
+#boutonsProjets li:hover p a
+{
+    background-color: rgb(72,171,204);
+    border-bottom: 1px solid rgb(22,101,204);
+    box-shadow: 0 3px 1px rgb(22,101,204);
+    color: white;
+}
+
+#boutonsProjets li:hover .flecheBas
+{
+    opacity: 1;
+}
+
+figure
+{
+    width: 30%;
+    position: relative;
+}
+
+.imageProjet
+{
+    width: 100%;
+}
+
+#imagesLigne1, #imagesLigne2
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+figcaption
+{
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    max-height: 40%;
+    
+    padding: 0 10px 5px 10px;
+    
+    opacity: 0;
+}
+
+figcaption strong
+{
+    font-size: 1.5em;
+}
+
+figcaption p
+{
+    font-size: 0.9em;
+}
+
+.oeil
+{
+    background-color: rgb(72,171,204);
+    color: white;
+    padding: 8px;
+    border: 2px solid white;
+    border-radius: 50%;
+    
+    position: absolute;
+    right: 10px;
+    bottom: 55px;
+}
+
+figure:hover figcaption
+{
+    opacity: 1;
+}
+
+/* CONTACT */
+footer
+{
+    background-color: rgba(222,222,222,0.2);
+    position: relative;
+}
+
+iframe
+{
+    position: absolute;
+    height: 620px;
+    width: 100%;
+    
+    border: none;
+}
+
+#calque
+{
+    position: absolute;
+    height: 620px;
+    
+    width: 100%;
+    margin: auto;
+}
+
+#calque:hover
+{
+    background-color: rgba(72,171,204,0.3);
+}
+
+form
+{
+    background-color: rgba(250,250,250,0.9);
+    
+    position: absolute;
+    left: 75%;
+    top: 140%;
+    padding: 1px 15px;
+}
+
+form h3
+{
+    font-size: 1.4em;
+}
+
+#adresse
+{
+    font-size: 0.9em;
+    margin: -10px 0 15px 0;
+}
+
+#name, #email, #subject, #message
+{
+    background-color: rgb(250,250,250);
+    font-family: 'Roboto-Bold', sans-serif;
+    color: rgba(0,0,0,0.7);
+    font-size: 0.9em;
+    
+    width: 220px;
+    padding: 5px 10px;
+    
+    border-radius: 5px;
+    border: 1px solid rgba(200,200,200,0.8);
+    
+    margin-bottom: 12px;
+
+}
+
+#message
+{
+    height: 120px;
+}
+
+#boutonContact
+{
+    background-color: rgb(72,171,204);
+    width: auto;
+    height: 25px;
+    
+    font-family: 'Roboto-Bold', sans-serif;
+    color: white;
+    font-size: 1em;
+    text-align: center;
+    
+    border: 1px solid rgb(72,171,204);
+    border-radius: 3px;
+    
+    cursor: pointer;
+}
+
+#boutonContact:hover
+{
+    border-bottom: 1px solid rgb(22,101,204);
+    box-shadow: 1px 2px 2px rgb(22,101,204);
+}
+
+/* - -- - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+/* RESONSIVE TABLETTE */
+
+@media (min-width: 480px) and (max-width: 1280px)
+{
+    body
+    {
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* MENU NAV */
+    
+    #menu
+    {
+        justify-content: center;
+        position: static;
+    }
+    
+    nav a
+    {
+        padding-top: 30px;
+    }
+    
+    #menu li
+    {   
+        font-size: 0.9em;
+    }
+    
+    nav a:hover
+    {
+        margin-top: 0;
+        padding-top: 30px;
+    }
+    
+    
+    /* EN-TETE HEADER */
+    
+    #bg1, #bg2
+    {
+        height: 100%;
+    }
+    
+    #flecheGauche, #flecheDroite
+    {
+        font-size: 1em;
+        padding: 15px 10px;
+    }
+    
+    .progress-bar
+    {
+        height: 5px;
+    }
+    
+    #enTete
+    {
+        top: 20%;
+        left: 10%;
+    }
+    
+    h1
+    {
+        font-size: 1.5em;
+    }
+    
+    header p
+    {
+        font-size: 0.7em;
+    }
+    
+    #boutonTete
+    {
+        font-size: 0.9em;
+        width: auto;
+        height: auto;
+    }
+    
+    /* SECTIONS */
+    
+    section
+    {
+        padding-top: 0;
+    }
+    
+    h2
+    {
+        font-size: 2em;
+    }
+    
+    hr
+    {
+        width: 100px;
+    }
+    
+    .point
+    {
+        font-size: 10px;
+        width: 10px;
+        bottom: 15px;
+    }
+    
+    .introduction
+    {
+        font-size: 1em;
+        padding: 0 40px 0 40px;
+    }
+    
+    
+    /* SECTION SERVICES */
+    
+    #description
+    {
+        flex-direction: column;
+    }
+    
+    #services ul
+    {
+        font-size: 1.1em;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .bloc1
+    {
+        flex: 0.2;
+        margin-right: 5px;
+    }
+    
+    .bloc2
+    {
+        flex: 0.9;
+        margin-right: 30px;
+    }
+    
+    h3
+    {
+        font-size: 1.2em;
+    }
+    
+    .icone
+    {
+        font-size: 1.7em;
+        padding: 13px;
+        border: 1px solid rgba(0,0,0,0.2);
+        
+        top: 45px;
+        left: 50px;
+    }
+    
+    .pointCercle
+    {
+        bottom: 35px;
+        left: 39px;
+        font-size: 0.4em;
+        
+        left: 46px;
+    }
+    
+    #imageOrdinateur
+    {
+        width: 50%;
+    } 
+    
+    /* SECTION PROJETS */
+    
+    #boutonsProjets
+    {
+        font-size: 1.3em;
+        padding: 0;
+    }
+    
+    .flecheBas
+    {
+        font-size: 1.6em;
+        bottom: 27px;
+    }
+    
+    #projets a
+    {
+        padding: 8px;
+    }
+    
+    figure
+    {
+        width: 29%;
+    }
+    
+    #imagesLigne1, #imagesLigne2
+    {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    figcaption strong
+    {
+        font-size: 1.3em;
+    }
+    
+    figcaption p
+    {
+        font-size: 0.8em;
+    }
+    
+    
+     /* SECTION CONTACT */
+    
+    iframe
+    {
+        width: 100%;
+        height: 500px;
+    }
+    
+    #calque
+    {
+        height: 500px;
+    }
+    
+    form
+    {
+        top: 565px;
+        left: 2px;
+        
+        width: 95%;
+    }
+    
+    form h3
+    {
+        font-size: 1.2em;
+        text-align: center;
+    }
+    
+    #adresse
+    {
+        font-size: 0.9em;
+        text-align: center;
+    }
+    
+    #name, #email, #subject, #message
+    {
+        font-size: 0.6em;
+        
+        height: auto;
+        width: 95%;
+    }
+    
+    #boutonContact
+    {
+        width: auto;
+        height: auto;
+    }
+}
+
+/* - -- - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* RESPONSIVE MOBILE*/
+
+@media (max-width: 480px)
+{
+    body
+    {
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* MENU NAV */
+    
+    #logo
+    {
+        margin: auto;
+        padding: 5px 0 5px 0;
+    }
+    
+    #menu
+    {
+        position: static;
+        flex-direction: column-reverse;
+    }
+    
+    
+    #menu ul
+    {
+        padding: 20px 0 0 0;
+        font-size: 0.7em;
+    }
+    
+    #menu li
+    {
+        margin: 0 5px 0 5px;
+    }
+    
+    nav a
+    {
+        padding-top: 20px;
+    }
+    
+    nav a:hover
+    {
+        padding-top: 15px;
+    }
+    
+    
+    /* EN-TETE HEADER */
+    
+    header
+    {
+        display: none;
+    }
+    
+    /* SECTIONS */
+    
+    section
+    {
+        padding-top: 0;
+    }
+    
+    h2
+    {
+        font-size: 1.5em;
+    }
+    
+    hr
+    {
+        width: 70px;
+    }
+    
+    .point
+    {
+        font-size: 8px;
+        width: 8px;
+        bottom: 14px;
+    }
+    
+    .introduction
+    {
+        font-size: 0.9em;
+        padding: 0 20px 0 20px;
+    }
+    
+    
+    /* SECTION SERVICES */
+    
+    #description
+    {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #services ul
+    {
+        margin: 0;
+        padding: 0;
+    }
+    
+    #services li
+    {
+        justify-content: flex-end;
+    }
+    
+    .bloc1
+    {
+        flex: 0.2;
+    }
+    
+    .bloc2
+    {
+        flex: 0.8;
+        margin-right: 20px;
+    }
+    
+    h3
+    {
+        font-size: 1em;
+    }
+    
+    .icone
+    {
+        font-size: 1.3em;
+        border: 1px solid rgba(0,0,0,0.2);
+        padding: 10px;
+        
+        left: 8px;
+        top: 50px;
+    }
+    
+    .pointCercle
+    {
+        font-size: 5px;
+        
+        left: 6px;
+        top: 45px;
+    }   
+    
+    #imageOrdinateur
+    {
+        width: 80%;
+    } 
+    
+    /* SECTION PROJETS */
+    
+    #boutonsProjets
+    {
+        font-size: 0.9em;
+        padding: 0;
+    }
+    
+    .flecheBas
+    {
+        font-size: 1.4em;
+        bottom: 13px;
+    }
+    
+    #projets a
+    {
+        padding: 8px;
+    }
+    
+    figure
+    {
+        width: 75%;
+    }
+    
+    #imagesLigne1, #imagesLigne2
+    {
+        flex-direction: column;
+    }
+    
+    figcaption
+    {
+        height: 40%;
+    }
+    
+    figcaption strong
+    {
+        font-size: 1.3em;
+    }
+    
+    figcaption p
+    {
+        font-size: 0.8em;
+    }
+    
+    
+     /* SECTION CONTACT */
+    
+    iframe
+    {
+        width: 100%;
+        height: 400px;
+    }
+    
+    #calque
+    {
+        height: 400px;
+    }
+    
+    form
+    {
+        background-color: rgba(240,240,240,0.8);
+        top: 430px;
+        left: 0;
+        width: 91%;
+    }
+    
+    form h3
+    {
+        font-size: 1.1em;
+        text-align: center;
+    }
+    
+    #adresse
+    {
+        font-size: 0.5em;
+        text-align: center;
+    }
+    
+    #name, #email, #subject, #message
+    {
+        font-size: 0.5em;
+        
+        height: auto;
+        width: 95%;
+    }
+    
+    #boutonContact
+    {
+        width: auto;
+        height: auto;
+    }
+}
